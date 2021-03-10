@@ -1,0 +1,61 @@
+  <form #f="ngForm" (ngSubmit)="onSubmitForm(f)">
+    <ion-grid>
+      <ion-row>
+        <ion-col>
+          <div class="form-group">
+            <label for="age">Âge*</label>
+            <input type="number" class="form-control" name="age" ngModel required min=0 max=120>
+          </div>
+        </ion-col>
+        <ion-col>
+          <div class="form-group">
+            <label for="sexe">Sexe*</label>
+            <select class="form-control" name="sexe" ngModel required>
+              <option value=0>Femme</option>
+              <option value=1>Homme</option>
+            </select>
+           </div>
+          </ion-col>
+          <ion-col>
+            <div class="form-group">
+              <label for="temperature">Température</label>
+              <input type="number" class="form-control" name="temperature" ngModel min=34 max= 43 step=.1>
+            </div>
+          </ion-col>
+          <ion-col>
+            <div class="form-group">
+              <label for="saturation">Saturation</label>
+              <input type="number" class="form-control" name="saturation" ngModel min=80 max=100 step=.1>
+            </div>
+          </ion-col>
+        </ion-row>
+      </ion-grid>
+      <ion-grid>
+        <ion-row>
+          <ion-col>
+              <ion-list class="selectContainer">
+                <ion-list-header mode='ios'>Risque(s)*</ion-list-header>
+                <ion-item *ngFor="let risk of risks">
+                    <ion-label>
+                      {{risk.name}}
+                    </ion-label>
+                    <ion-checkbox slot='start'  [(ngModel)]="risk.value" [ngModelOptions]="{standalone:true}"></ion-checkbox>
+                </ion-item>
+              </ion-list>
+          </ion-col>
+          <ion-col>
+              <ion-list class="selectContainer">
+                <ion-list-header mode='ios'>Symptôme(s)*</ion-list-header>
+                <ion-item *ngFor="let symptom of symptoms">
+                    <ion-label>
+                      {{symptom.name}}
+                    </ion-label>
+                    <ion-checkbox  slot='start' [(ngModel)]="symptom.value" [ngModelOptions]="{standalone:true}"></ion-checkbox>
+                </ion-item>
+              </ion-list>
+          </ion-col>
+        </ion-row>
+      </ion-grid>
+    <ion-button color="dark" type="submit" [disabled]="!isFormValid(f)">Valider</ion-button>
+    <p>Les champs marqués d'un astérisque(*) sont obligatoires.</p>
+  </form>

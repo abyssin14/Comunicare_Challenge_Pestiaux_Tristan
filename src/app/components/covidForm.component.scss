@@ -1,0 +1,17 @@
+.form-group{
+    min-width: 100px;
+}
+.selectContainer{
+    height : 100%;
+    border-radius: 10px;
+    padding: 2%;
+}
+ion-list-header{
+    --color: grey
+}
+
+ion-button{
+    width: 200px;
+    margin-left: 50%;
+    transform: translate(-50%);
+}
