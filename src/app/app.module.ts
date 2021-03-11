@@ -9,9 +9,10 @@ import { IonicModule, IonicRouteStrategy } from '@ionic/angular';
 import { AppComponent } from './app.component';
 import { HomePage } from './home/home.page';
 import { CovidFormComponent } from './components/covidForm.component'
+import { PredictionComponent } from './components/prediction.component'
 
 @NgModule({
-  declarations: [AppComponent, HomePage, CovidFormComponent],
+  declarations: [AppComponent, HomePage, CovidFormComponent, PredictionComponent],
   entryComponents: [],
   imports: [
       BrowserModule,

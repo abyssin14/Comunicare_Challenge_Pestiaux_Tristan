@@ -16,7 +16,8 @@
       <ion-card-title color="primary">Prédiction du risque d’hospitalisation des patients positifs COVID-19</ion-card-title>
     </ion-card-header>
     <ion-card-content>
-      <covid-form></covid-form>
+      <covid-form [hidden]="!isFormVisible"></covid-form>
+      <prediction [hidden]="isFormVisible"></prediction>
     </ion-card-content>
   </ion-card>
 </ion-content>
