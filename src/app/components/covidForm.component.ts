@@ -35,7 +35,7 @@ export class CovidFormComponent implements OnInit{
 
     if(isRequiredFielValid && isRisksNotEmpty && isSymptomsNotEmpty) return true;
 
-    return true
+    return false
   }
   async onSubmitForm(form: NgForm){
     let dataFihrFormat = this.covidFormService.formatToFhir(form.value);

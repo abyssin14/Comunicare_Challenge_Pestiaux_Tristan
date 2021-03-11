@@ -18,8 +18,7 @@ import { PredictionComponent } from './components/prediction.component'
       BrowserModule,
       IonicModule.forRoot(),
       RouterModule.forRoot([
-        {path: '', redirectTo: 'home', pathMatch: 'full'},
-        {path: 'home', component: HomePage}
+        {path: '', component: HomePage}
       ]),
     FormsModule,
     HttpClientModule
