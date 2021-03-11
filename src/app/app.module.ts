@@ -8,8 +8,8 @@ import { IonicModule, IonicRouteStrategy } from '@ionic/angular';
 
 import { AppComponent } from './app.component';
 import { HomePage } from './home/home.page';
-import { CovidFormComponent } from './components/covidForm.component'
-import { PredictionComponent } from './components/prediction.component'
+import { CovidFormComponent } from './components/covidForm/covidForm.component'
+import { PredictionComponent } from './components/prediction/prediction.component'
 
 @NgModule({
   declarations: [AppComponent, HomePage, CovidFormComponent, PredictionComponent],

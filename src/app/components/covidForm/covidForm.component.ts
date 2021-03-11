@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { NgForm } from '@angular/forms'
-import { CovidFormService } from '../services/covidForm.service'
+import { CovidFormService } from '../../services/covidForm.service'
 
 
 @Component({
